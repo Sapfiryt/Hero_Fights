@@ -55,6 +55,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Archer.cs" />
+    <Compile Include="BaseFactory.cs" />
+    <Compile Include="Factory.cs" />
+    <Compile Include="Mage.cs" />
+    <Compile Include="Warrior.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
