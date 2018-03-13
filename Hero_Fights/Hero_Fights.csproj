@@ -57,12 +57,25 @@
     </ApplicationDefinition>
     <Compile Include="Archer.cs" />
     <Compile Include="BaseFactory.cs" />
+    <Compile Include="BattleField.xaml.cs">
+      <DependentUpon>BattleField.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DamageObserver.cs" />
     <Compile Include="Factory.cs" />
     <Compile Include="IObserver.cs" />
     <Compile Include="Mage.cs" />
+    <Compile Include="Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Observers.cs" />
+    <Compile Include="PlayerMenu.xaml.cs">
+      <DependentUpon>PlayerMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Warrior.cs" />
+    <Page Include="BattleField.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -80,6 +93,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Menu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Orcs.cs" />

@@ -1,0 +1,97 @@
+﻿<UserControl x:Class="HeroFight.Menu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HeroFight"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800">
+    <UserControl.Resources>
+     
+    </UserControl.Resources>
+    <Grid Loaded="Grid_Loaded">
+        <Grid.Background>
+            <ImageBrush ImageSource="{DynamicResource BGMain}"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="btnFight" Style="{StaticResource MenuButtonStyle}" Content="Бой" Margin="10,0,10,25" Grid.Column="1"   Height="100" VerticalAlignment="Bottom" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform x:Name="btnFightScale" ScaleX="1" ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform x:Name="btnFightTranslate"  X="0" Y="0"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click" >
+                    <BeginStoryboard >
+                        <Storyboard x:Name="btnFightStory" >
+
+                            <DoubleAnimation AutoReverse="True"  Storyboard.TargetName="btnFightScale" 
+                                                Storyboard.TargetProperty="ScaleX"
+                                                By="-0.1" Duration="0:0:0.1" />
+                            <DoubleAnimation AutoReverse="True" Storyboard.TargetName="btnFightScale" 
+                                                Storyboard.TargetProperty="ScaleY"
+                                                By="-0.1" Duration="0:0:0.1" />
+                            <DoubleAnimation AutoReverse="True" Storyboard.TargetName="btnFightTranslate" 
+                                                Storyboard.TargetProperty="X"
+                                                By="15.0" Duration="0:0:0.1" />
+                            <DoubleAnimation AutoReverse="True" Storyboard.TargetName="btnFightTranslate" 
+                                                Storyboard.TargetProperty="Y"
+                                                By="7.5" Duration="0:0:0.1" />
+                        </Storyboard>
+                    </BeginStoryboard>
+
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+
+
+
+        <Button x:Name="btnExit" Style="{StaticResource MenuButtonStyle}" Content="Выход" Margin="10,25,10,0" VerticalAlignment="Top" Height="100"   Grid.Column="1" Grid.Row="1">
+
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform x:Name="btnExitScale" ScaleX="1" ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform x:Name="btnExitTranslate" X="0" Y="0"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click" >
+                    <BeginStoryboard >
+                        <Storyboard x:Name="btnExitStory" >
+
+                            <DoubleAnimation AutoReverse="True"  Storyboard.TargetName="btnExitScale" 
+                                                Storyboard.TargetProperty="ScaleX"
+                                                By="-0.1" Duration="0:0:0.1" />
+                            <DoubleAnimation AutoReverse="True" Storyboard.TargetName="btnExitScale" 
+                                                Storyboard.TargetProperty="ScaleY"
+                                                By="-0.1" Duration="0:0:0.1" />
+                            <DoubleAnimation AutoReverse="True" Storyboard.TargetName="btnExitTranslate" 
+                                                Storyboard.TargetProperty="X"
+                                                By="15.0" Duration="0:0:0.1" />
+                            <DoubleAnimation AutoReverse="True" Storyboard.TargetName="btnExitTranslate" 
+                                                Storyboard.TargetProperty="Y"
+                                                By="7.5" Duration="0:0:0.1" />
+                        </Storyboard>
+                    </BeginStoryboard>
+
+                </EventTrigger>
+            </Button.Triggers>
+       
+        </Button>
+
+    </Grid>
+</UserControl>
