@@ -57,8 +57,11 @@
     </ApplicationDefinition>
     <Compile Include="Archer.cs" />
     <Compile Include="BaseFactory.cs" />
+    <Compile Include="DamageObserver.cs" />
     <Compile Include="Factory.cs" />
+    <Compile Include="IObserver.cs" />
     <Compile Include="Mage.cs" />
+    <Compile Include="Observers.cs" />
     <Compile Include="Warrior.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
