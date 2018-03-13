@@ -132,8 +132,43 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <Resource Include="Resources\archer_btn.png" />
+    <Resource Include="Resources\attack_btn.png" />
+    <Resource Include="Resources\back.png" />
+    <Resource Include="Resources\background.png" />
+    <Resource Include="Resources\bf_background.png" />
+    <Resource Include="Resources\bf_border.png" />
+    <Resource Include="Resources\bg_main.png" />
+    <Resource Include="Resources\bg_playermenu.png" />
+    <Resource Include="Resources\bottom.png" />
+    <Resource Include="Resources\cage.jpg" />
+    <Resource Include="Resources\elf_archer.png" />
+    <Resource Include="Resources\elf_btn.png" />
+    <Resource Include="Resources\elf_mage.png" />
+    <Resource Include="Resources\elf_warrior.png" />
+    <Resource Include="Resources\fight.png" />
+    <Resource Include="Resources\human_archer.png" />
+    <Resource Include="Resources\human_btn.png" />
+    <Resource Include="Resources\human_mage.png" />
+    <Resource Include="Resources\human_warrior.png" />
+    <Resource Include="Resources\left_btn.png" />
+    <Resource Include="Resources\mage_btn.png" />
+    <Resource Include="Resources\orc_archer.png" />
+    <Resource Include="Resources\orc_btn.png" />
+    <Resource Include="Resources\orc_mage.png" />
+    <Resource Include="Resources\orc_warrior.png" />
+    <Resource Include="Resources\plate.png" />
+    <Resource Include="Resources\right_btn.png" />
+    <Resource Include="Resources\rope.png" />
+    <Resource Include="Resources\start.png" />
+    <Resource Include="Resources\steel.png" />
+    <Resource Include="Resources\sword.ico" />
+    <Resource Include="Resources\tb_image.png" />
+    <Resource Include="Resources\top.png" />
+    <Resource Include="Resources\warrior_btn.png" />
+    <Resource Include="Resources\wood.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
