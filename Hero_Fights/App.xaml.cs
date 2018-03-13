@@ -6,12 +6,16 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Hero_Fights
+namespace HeroFight
 {
     /// <summary>
     /// Логика взаимодействия для App.xaml
     /// </summary>
     public partial class App : Application
     {
+        private void Storyboard_Completed(object sender, EventArgs e)
+        {
+            Console.WriteLine("---------------------------------------");
+        }
     }
 }

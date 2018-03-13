@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Hero_Fights
+namespace HeroFight
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
@@ -23,6 +23,24 @@ namespace Hero_Fights
         public MainWindow()
         {
             InitializeComponent();
+           
+            
+           
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            
+          
+        }
+
+        internal void SetMainElement(UserControl control)
+        {
+
+            this.Content = control;
+           
+               
         }
     }
 }
