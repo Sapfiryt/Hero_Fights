@@ -132,7 +132,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Resource Include="Resources\archer_btn.png" />
     <Resource Include="Resources\attack_btn.png" />
