@@ -22,7 +22,7 @@ namespace HeroFight
         public bool isWin { get { return win; }}
         public bool isLose { get { return lose; }}
         public bool isTie { get { return tie; }}
-        public bool isMoved { get { return moved; } }
+        public bool isMoved { get { return moved; }}
         public IHero Player { get { return player; }}
         public IHero Enemy { get { return enemy; }}
 
