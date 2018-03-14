@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,6 +56,28 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Archer.cs" />
+    <Compile Include="BaseFactory.cs" />
+    <Compile Include="Battle.cs" />
+    <Compile Include="BattleField.xaml.cs">
+      <DependentUpon>BattleField.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DamageObserver.cs" />
+    <Compile Include="Factory.cs" />
+    <Compile Include="IObserver.cs" />
+    <Compile Include="Mage.cs" />
+    <Compile Include="Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Observers.cs" />
+    <Compile Include="PlayerMenu.xaml.cs">
+      <DependentUpon>PlayerMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Warrior.cs" />
+    <Page Include="BattleField.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -63,13 +86,26 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Battle.cs" />
+    <Compile Include="Elfs.cs" />
+    <Compile Include="Hero.cs" />
+    <Compile Include="Humans.cs" />
+    <Compile Include="IHero.cs" />
+    <Compile Include="IRace.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Menu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Orcs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -95,6 +131,44 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\archer_btn.png" />
+    <Resource Include="Resources\attack_btn.png" />
+    <Resource Include="Resources\back.png" />
+    <Resource Include="Resources\background.png" />
+    <Resource Include="Resources\bf_background.png" />
+    <Resource Include="Resources\bf_border.png" />
+    <Resource Include="Resources\bg_main.png" />
+    <Resource Include="Resources\bg_playermenu.png" />
+    <Resource Include="Resources\bottom.png" />
+    <Resource Include="Resources\cage.jpg" />
+    <Resource Include="Resources\elf_archer.png" />
+    <Resource Include="Resources\elf_btn.png" />
+    <Resource Include="Resources\elf_mage.png" />
+    <Resource Include="Resources\elf_warrior.png" />
+    <Resource Include="Resources\fight.png" />
+    <Resource Include="Resources\human_archer.png" />
+    <Resource Include="Resources\human_btn.png" />
+    <Resource Include="Resources\human_mage.png" />
+    <Resource Include="Resources\human_warrior.png" />
+    <Resource Include="Resources\left_btn.png" />
+    <Resource Include="Resources\mage_btn.png" />
+    <Resource Include="Resources\orc_archer.png" />
+    <Resource Include="Resources\orc_btn.png" />
+    <Resource Include="Resources\orc_mage.png" />
+    <Resource Include="Resources\orc_warrior.png" />
+    <Resource Include="Resources\plate.png" />
+    <Resource Include="Resources\right_btn.png" />
+    <Resource Include="Resources\rope.png" />
+    <Resource Include="Resources\start.png" />
+    <Resource Include="Resources\steel.png" />
+    <Resource Include="Resources\sword.ico" />
+    <Resource Include="Resources\tb_image.png" />
+    <Resource Include="Resources\top.png" />
+    <Resource Include="Resources\warrior_btn.png" />
+    <Resource Include="Resources\wood.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

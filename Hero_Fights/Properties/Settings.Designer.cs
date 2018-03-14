@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hero_Fights.Properties
+namespace HeroFight.Properties
 {
 
 

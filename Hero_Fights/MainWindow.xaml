@@ -1,12 +1,11 @@
-﻿<Window x:Class="Hero_Fights.MainWindow"
+﻿<Window x:Class="HeroFight.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Hero_Fights"
+        xmlns:local="clr-namespace:HeroFight"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="630" Width="802" Icon="Resources/sword.ico">
+    <local:Menu x:Name="Menu"/>
+
 </Window>

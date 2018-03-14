@@ -16,31 +16,23 @@ using System.Windows.Shapes;
 namespace HeroFight
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Menu.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Menu : UserControl
     {
-        public MainWindow()
+        public Menu()
         {
             InitializeComponent();
-           
-            
-           
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
-
-            
-          
+            btnFightStory.Completed += (s, ev) => 
+            { (this.Parent as MainWindow).SetMainElement(new PlayerMenu());
+            };
+            btnExitStory.Completed += (s, ev) => { Environment.Exit(0); };
         }
 
-        internal void SetMainElement(UserControl control)
-        {
-
-            this.Content = control;
-           
-               
-        }
+       
     }
 }

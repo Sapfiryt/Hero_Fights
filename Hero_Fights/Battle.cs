@@ -116,17 +116,15 @@ namespace HeroFight
             enemy.X = 100;
         }
 
-        internal void Melee()
-        {
-            this.melee = true;
-        }
-
         internal void Range()
         {
             this.melee = false;
         }
 
-       
+        internal void Melee()
+        {
+            this.melee = true;
+        }
 
         public void PlayerMoveRight()
         {

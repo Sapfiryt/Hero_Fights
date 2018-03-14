@@ -1,9 +1,237 @@
-﻿<Application x:Class="Hero_Fights.App"
+﻿<Application x:Class="HeroFight.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Hero_Fights"
+             xmlns:local="clr-namespace:HeroFight"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <BitmapImage x:Key="RopeBorder" UriSource="Resources\rope.png" />
+        <BitmapImage x:Key="Wood" UriSource="Resources\wood.png" />
+        <BitmapImage x:Key="SteelBorder" UriSource="Resources\steel.png" />
+        <BitmapImage x:Key="Back" UriSource="Resources\back.png" />        
+        <BitmapImage x:Key="Plate" UriSource="Resources\plate.png" />
+        <BitmapImage x:Key="NameTbImage" UriSource="Resources\tb_image.png" />
+        <BitmapImage x:Key="StartImage" UriSource="Resources\start.png" />
+        <BitmapImage x:Key="WarriorBtnImage" UriSource="Resources\warrior_btn.png" />
+        <BitmapImage x:Key="ArcherBtnImage" UriSource="Resources\archer_btn.png" />
+        <BitmapImage x:Key="MageBtnImage" UriSource="Resources\mage_btn.png" />
+        <BitmapImage x:Key="CageBackground" UriSource="Resources\cage.jpg" />
+        <BitmapImage x:Key="Top" UriSource="Resources\top.png" />
+        <BitmapImage x:Key="Bottom" UriSource="Resources\bottom.png" />
+        <BitmapImage x:Key="BFBackground" UriSource="Resources\bf_background.png" />
+        <BitmapImage x:Key="BFPanelBackground" UriSource="Resources\background.png" />
+        <BitmapImage x:Key="BGPlayerMenu" UriSource="Resources\bg_playermenu.png" />
+        <BitmapImage x:Key="BGMain" UriSource="Resources\bg_main.png" />
+        <BitmapImage x:Key="Fight" UriSource="Resources\fight.png" />
+        <BitmapImage x:Key="AttackButton" UriSource="Resources\attack_btn.png" />
+        <BitmapImage x:Key="LeftButton" UriSource="Resources\left_btn.png"/>
+        <BitmapImage x:Key="RightButton" UriSource="Resources\right_btn.png" />
+        <BitmapImage x:Key="ElfsButton" UriSource="Resources\elf_btn.png" />
+        <BitmapImage x:Key="HumansButton" UriSource="Resources\human_btn.png" />
+        <BitmapImage x:Key="OrcsButton" UriSource="Resources\orc_btn.png" />
+        <BitmapImage x:Key="BattleFielBorder" UriSource="Resources\bf_border.png" />
+
+
+
+
+        <Style x:Key="BackButton" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Image Name="ContentImage" Source="{DynamicResource Back}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+
+                                <Setter Property="Image.Effect" TargetName="ContentImage">
+                                    <Setter.Value>
+                                        <DropShadowEffect BlurRadius="20" Color="Gold" ShadowDepth="0" Opacity="1" Direction="315"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="StartButton" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Image Name="ContentImage" Source="{DynamicResource StartImage}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+
+                                <Setter Property="Image.Effect" TargetName="ContentImage">
+                                    <Setter.Value>
+                                        <DropShadowEffect BlurRadius="20" Color="Red" ShadowDepth="0" Opacity="1" Direction="315"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <Style x:Key="SideButton" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Rectangle Name="MainRectangle" Margin="0">
+
+
+                                <Rectangle.Fill>
+                                    <ImageBrush TileMode="Tile"  Viewport="0 0 1 1"  
+                                                ImageSource="{DynamicResource Plate}"/>
+                                </Rectangle.Fill>
+
+                            </Rectangle>
+                            <Image Name="Image" Source="{TemplateBinding Tag}"  />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+
+                                <Setter Property="Rectangle.Effect" TargetName="MainRectangle">
+                                    <Setter.Value>
+                                        <DropShadowEffect BlurRadius="20" Color="Gold" ShadowDepth="0" Opacity="1" Direction="315"/>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="Image.Effect" TargetName="Image">
+                                    <Setter.Value>
+                                        <DropShadowEffect BlurRadius="10" Color="White" ShadowDepth="2" Opacity="1" Direction="315"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <Style x:Key="FightButton" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>                            
+                            <Image Name="Image" Source="{TemplateBinding Tag}"  />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+
+                                <Setter Property="Image.Effect" TargetName="Image">
+                                    <Setter.Value>
+                                        <DropShadowEffect BlurRadius="20" Color="Gold" ShadowDepth="0" Opacity="1" Direction="315"/>
+                                    </Setter.Value>
+                                </Setter>                                
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    
+            
+        
+        <Style x:Key="MenuButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderThickness="0,5,0,5"  Name="MainTemplate">
+                            <Border.BorderBrush>
+                                <ImageBrush  ViewportUnits="Absolute"  
+                                         Viewport="0.0,0.0,20.0,20.0" 
+                                         TileMode="FlipY" 
+                                         ImageSource="{DynamicResource RopeBorder}" />
+                            </Border.BorderBrush>
+                            <Border BorderThickness="5,0,5,0" Margin="0,0,0,0" >
+                                <Border.BorderBrush>
+                                    <ImageBrush  ViewportUnits="Absolute"  
+                                             Viewport="0.0,0.0,10.0,10.0" 
+                                             TileMode="FlipY" 
+                                             ImageSource="{DynamicResource RopeBorder}" >
+                                        <ImageBrush.RelativeTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                <RotateTransform Angle="270" CenterY="0.5" CenterX="0.5"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </ImageBrush.RelativeTransform>
+                                    </ImageBrush>
+                                </Border.BorderBrush>
+                                <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" >
+                                    <Rectangle Name="MainRectangle" Margin="0,0,0,10">
+
+
+                                        <Rectangle.Fill>
+                                            <ImageBrush TileMode="Tile" ImageSource="{DynamicResource Wood}"/>
+                                        </Rectangle.Fill>
+
+
+                                    </Rectangle>
+                                    <Rectangle Fill="Gray">
+                                        <Rectangle.OpacityMask>
+                                            <LinearGradientBrush EndPoint="0,0" MappingMode="RelativeToBoundingBox" StartPoint="1,1">
+                                                <GradientStop Color="Transparent" Offset="0"/>
+                                                <GradientStop Color="#7F060606" Offset="1"/>
+                                            </LinearGradientBrush>
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                    <ContentPresenter Name="Text" Margin="15" Content="{TemplateBinding Content}"   
+                                                      TextBlock.FontSize="48"
+                                                      TextBlock.FontFamily="Times New Roman	"
+                                                      TextBlock.TextAlignment="Center">
+                                    </ContentPresenter>
+                                </Grid>
+                            </Border>
+                            <Border.RenderTransform>
+                                <ScaleTransform/>
+                            </Border.RenderTransform>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+
+                                <Setter Property="Border.Effect" TargetName="MainTemplate">
+                                    <Setter.Value>
+                                        <DropShadowEffect BlurRadius="20" Color="Gold" ShadowDepth="0" Opacity="1" Direction="315"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <Style x:Key="NameTextBox" TargetType="{x:Type TextBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        
+                                        
+                                <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" >
+                                    <ScrollViewer x:Name="PART_ContentHost"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <Grid.Background>
+                                        <ImageBrush TileMode="Tile" ImageSource="{DynamicResource NameTbImage}"/>
+                                    </Grid.Background>
+                                   
+                                </Grid>
+                          
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Application.Resources>
 </Application>
